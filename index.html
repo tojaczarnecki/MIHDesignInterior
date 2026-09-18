@@ -16,17 +16,17 @@
       .logo img { opacity: .96; }
       :root { --serif: "Chiron Sung HK", Georgia, serif; --sans: "Geomini", Arial, sans-serif; }
       h1 em, h2 em { font-style: normal; }
-      .logo { display: inline-flex; align-items: center; justify-content: flex-start; width: clamp(2.15rem, 3vw, 3rem); line-height: 0; }
-      .logo img { display: block; width: auto; height: clamp(2.4rem, 4vw, 3.35rem); max-height: none; object-fit: contain; }
+      .logo { display: inline-flex; align-items: center; justify-content: flex-start; width: clamp(8.8rem, 12vw, 12rem); line-height: 0; }
+      .logo img { display: block; width: 100%; height: auto; max-height: none; object-fit: contain; }
       .hero-image { background-image: url("assets/projects/detail-kitchen.jpg"); }
       .studio, .founders, .projects, .services, .journal, .collection, .brief { padding-block: clamp(6rem, 9vw, 9rem); }
       p, h1, h2, h3, h4, h5, h6, .project-name, .journal-info p, .studio-copy > p, .services-intro, .collection-copy, .brief-copy { text-wrap: pretty; }
       h1, h2, h3, h4, h5, h6, .project-name, .journal-info h3 { text-wrap: balance; }
       :lang(pl) [data-i18n], :lang(pl) .project-name, :lang(pl) .journal-info p { hyphens: none; overflow-wrap: normal; }
       :lang(en) [data-i18n], :lang(en) .project-name, :lang(en) .journal-info p { hyphens: none; overflow-wrap: normal; }
-      .brand-signet { display: block; width: clamp(2.8rem, 4vw, 4.2rem); height: auto; margin-bottom: 1.8rem; }
+      .brand-signet { display: block; width: clamp(9rem, 15vw, 13rem); height: auto; margin-bottom: 1.8rem; }
       .text-link span, .header-cta span, .brief-button span, .service-arrow, .journal-meta b, .scroll-hint b { font-family: Arial, Helvetica, sans-serif; font-variant-emoji: text; }
-      .footer-top .logo { width: 4.4rem; }
+      .footer-top .logo { width: clamp(9rem, 13vw, 12rem); }
       .footer-top .logo img { width: 100%; height: auto; max-height: none; }
     </style>
     <style>
@@ -211,7 +211,7 @@
   <body>
     <a class="skip-link" href="#main-content" data-i18n="skip">Przejdź do treści</a>
     <header class="site-header" data-header>
-      <a class="logo" href="#top" aria-label="MIH Design — strona główna"><img src="assets/brand/logo-01.svg" alt="Sygnet MIH Design" /></a>
+      <a class="logo" href="#top" aria-label="MIH Design — strona główna"><img src="assets/brand/mih-logo-white.webp" alt="MIH Design" /></a>
       <nav class="desktop-nav" aria-label="Główna nawigacja">
         <a href="#studio" data-i18n="navStudio">Studio</a>
         <a href="#projects" data-i18n="navProjects">Projekty</a>
@@ -326,7 +326,7 @@
 
       <section class="collection section-light" id="collection" aria-labelledby="collection-title">
         <div class="container collection-grid">
-          <div class="collection-mark reveal"><img class="brand-signet" src="assets/brand/logo-01.svg" alt="Sygnet MIH Design" /><span>THE MIH COLLECTION</span></div>
+          <div class="collection-mark reveal"><img class="brand-signet" src="assets/brand/mih-logo-black.webp" alt="MIH Design" /><span>THE MIH COLLECTION</span></div>
           <div class="reveal reveal-delay"><p class="eyebrow eyebrow-dark" data-i18n="collectionEyebrow">THE MIH COLLECTION</p><h2 id="collection-title" data-i18n="collectionTitle">Przestrzeń<br /><em>na później.</em></h2><p class="collection-copy" data-i18n="collectionCopy">Zapowiedź kolekcji MIH Design: konsultacje, projekty online, materiały i obiekty do świadomego życia.</p><a class="text-link text-link-dark" href="brief/" data-i18n="collectionCta">Odkryj kolekcję</a></div>
         </div>
       </section>
@@ -337,7 +337,7 @@
     </main>
 
     <footer class="site-footer section-dark" id="footer">
-      <div class="container footer-top"><a class="logo" href="#top"><img src="assets/brand/logo-04.svg" alt="MIH Design" /></a><p data-i18n="footerTagline">Interiors with a sense of place.</p><p>Warsaw · London · Worldwide</p></div>
+      <div class="container footer-top"><a class="logo" href="#top"><img src="assets/brand/mih-logo-white.webp" alt="MIH Design" /></a><p data-i18n="footerTagline">Interiors with a sense of place.</p><p>Warsaw · London · Worldwide</p></div>
       <div class="container footer-bottom"><nav aria-label="Linki stopki"><a href="#studio" data-i18n="navStudio">Studio</a><a href="#projects" data-i18n="navProjects">Projekty</a><a href="#services" data-i18n="navServices">Usługi</a><a href="#journal" data-i18n="navJournal">Journal</a><a href="#collection" data-i18n="navShop">Sklep</a><a href="brief/" data-i18n="footerContact">Kontakt</a></nav><div class="socials"><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a><a href="https://pinterest.com" target="_blank" rel="noreferrer">Pinterest</a><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></div><p>© 2026 MIH Design</p></div>
     </footer>
     <script src="script.js?v=f280954"></script>

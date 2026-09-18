@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="brief.css" />
   <style>
     html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+    .brand-mark { width: clamp(8.8rem, 13vw, 12rem); height: auto; }
+    .brand-mark img { display: block; width: 100%; height: auto; }
     img, svg, video { max-width: 100%; }
     .button span, .text-link span, .back-link { font-family: Arial, Helvetica, sans-serif; font-variant-emoji: text; }
     .brief-header { position: relative; z-index: 30; grid-template-columns: 1fr auto auto; }
@@ -54,7 +56,7 @@
 </head>
 <body>
   <header class="brief-header">
-    <a class="brand-mark" href="../index.html#top" aria-label="MIH Design — strona główna"><img src="../assets/brand/logo-01.svg" alt="Sygnet MIH Design" /></a>
+    <a class="brand-mark" href="../index.html#top" aria-label="MIH Design — strona główna"><img src="../assets/brand/mih-logo-white.webp" alt="MIH Design" /></a>
     <a class="back-link" href="../index.html#top" data-i18n="back">← Wróć na stronę główną</a>
     <div class="language-switch" aria-label="Wybierz język"><button type="button" class="language-button is-active" data-lang="pl" aria-pressed="true">PL</button><span>/</span><button type="button" class="language-button" data-lang="en" aria-pressed="false">EN</button></div>
     <button class="brief-menu-toggle" type="button" aria-expanded="false" aria-controls="brief-mobile-menu" aria-label="Otwórz menu" data-menu-toggle><span></span><span></span></button>
