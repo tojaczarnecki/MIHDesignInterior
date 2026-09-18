@@ -20,6 +20,7 @@ menuToggle.addEventListener("click",()=>setMobileMenu(!mobileMenu.classList.cont
 mobileMenu.querySelector("[data-menu-close]").addEventListener("click",()=>setMobileMenu(false));
 mobileMenu.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>setMobileMenu(false)));
 document.addEventListener("keydown",event=>{if(event.key==="Escape")setMobileMenu(false)});
+translations.pl.navNews="Journal";translations.pl.navContact="Kontakt";translations.en.navNews="News";translations.en.navContact="Contact us";
 translations.pl.studioTitle="Projektujemy<br><em>przestrzeń z sensem.</em>";
 translations.pl.word1="LUDZIE";translations.pl.word2="MATERIAŁ";translations.pl.word3="ŚWIATŁO";translations.pl.word4="DETAL";translations.pl.atelierNote="Od szkicu do ostatniego detalu — zespół, który prowadzi projekt przez cały proces.";
 translations.pl.foundersTitle="Dwie perspektywy.<br><em>Jedna wspólna narracja.</em>";translations.pl.foundersCopy="MIH Design tworzą dwie siostry bliźniaczki, które patrzą na przestrzeń z dwóch różnych perspektyw — łącząc intuicję, doświadczenie i wspólną wrażliwość na światło, materiał i detal.";
