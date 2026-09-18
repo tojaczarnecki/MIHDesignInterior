@@ -175,6 +175,9 @@
         .studio-copy > p, .services-intro, .collection-copy, .brief-copy, .journal-intro { max-width: 100%; font-size: clamp(.95rem, 4.8vw, 1.2rem); }
         .studio-words { max-width: 100%; gap: .45rem .8rem; letter-spacing: .08em; }
         .project-info, .project-name, .project-meta, .journal-info, .journal-info h3, .journal-info p { min-width: 0; max-width: 100%; }
+        .section-heading > *, .journal-heading > *, .service-item > *, .project-info > *, .journal-info > * { min-width: 0; }
+        .service-item { grid-template-columns: 2.25rem minmax(0, 1fr) auto; }
+        .service-name, .project-name, .journal-info h3 { overflow-wrap: anywhere; }
         .founders-copy { max-width: 100%; }
       }
       @media (max-width: 360px) {
