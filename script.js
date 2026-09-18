@@ -66,7 +66,7 @@ if(heroImage&&heroNav){
     window.setTimeout(()=>{heroImage.style.backgroundImage=`url("${slide.image}")`;heroImage.setAttribute("aria-label",slide.alt);if(heroLabel)heroLabel.textContent=slide.label[lang];if(heroProgress)heroProgress.style.width=`${((activeHero+1)/heroSlides.length)*100}%`;heroImage.classList.remove("is-transitioning")},480);
     heroButtons.forEach((button,buttonIndex)=>{const selected=buttonIndex===activeHero;button.classList.toggle("is-active",selected);button.setAttribute("aria-pressed",String(selected))});
   }
-  const restartHeroTimer=()=>{window.clearInterval(heroTimer);heroTimer=window.setInterval(()=>showHeroSlide(activeHero+1),6500)};
+  const restartHeroTimer=()=>{window.clearInterval(heroTimer);heroTimer=window.setInterval(()=>showHeroSlide(activeHero+1),10000)};
   heroButtons.forEach(button=>button.addEventListener("click",()=>{showHeroSlide(Number(button.dataset.heroSlide));restartHeroTimer()}));
   document.querySelectorAll("[data-lang]").forEach(button=>button.addEventListener("click",()=>{if(heroLabel)heroLabel.textContent=heroSlides[activeHero].label[document.documentElement.lang]}));
   showHeroSlide(0);restartHeroTimer();
