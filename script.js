@@ -44,3 +44,5 @@ function applyJournalFilter(){journalGrid.querySelectorAll(".journal-card").forE
 document.querySelectorAll("[data-journal-filter]").forEach(button=>button.addEventListener("click",()=>{journalFilter=button.dataset.journalFilter;applyJournalFilter()}));
 document.querySelectorAll("[data-lang]").forEach(button=>button.addEventListener("click",()=>setTimeout(()=>{applyJournalFilter();normalizeTextFlow()},0)));
 applyJournalFilter();normalizeTextFlow();
+function normalizeArrowPresentation(){document.querySelectorAll('.text-link span,.header-cta span,.brief-button span,.service-arrow,.journal-meta b,.scroll-hint b').forEach(el=>{el.textContent=el.textContent.replace('↗','↗︎').replace('→','→︎')})}
+normalizeArrowPresentation();
