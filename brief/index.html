@@ -15,6 +15,28 @@
     html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
     img, svg, video { max-width: 100%; }
     .button span, .text-link span, .back-link { font-family: Arial, Helvetica, sans-serif; font-variant-emoji: text; }
+    .brief-header { position: relative; z-index: 30; grid-template-columns: 1fr auto auto; }
+    .brief-header .language-switch { grid-column: 2; margin-right: .25rem; }
+    .brief-menu-toggle { display: none; grid-column: 3; width: 2.75rem; height: 2.75rem; align-items: center; justify-content: center; flex-direction: column; padding: .7rem; border: 0; background: transparent; color: var(--ivory); cursor: pointer; }
+    .brief-menu-toggle span { display: block; width: 1.35rem; height: 1px; margin: .28rem 0; background: var(--ivory); transition: transform .3s ease; }
+    .brief-mobile-menu { display: none; }
+    @media (max-width: 850px) {
+      .brief-header .back-link { display: none; }
+      .brief-menu-toggle { display: flex; }
+      .brief-menu-toggle.is-open { position: relative; z-index: 31; }
+      .brief-menu-toggle.is-open span:first-child { transform: translateY(.25rem) rotate(45deg); }
+      .brief-menu-toggle.is-open span:last-child { transform: translateY(-.25rem) rotate(-45deg); }
+      .brief-mobile-menu { position: fixed; z-index: 25; inset: 0; display: flex; align-items: center; padding: 7rem var(--pad) 3rem; background: var(--ink); color: var(--ivory); transform: translateY(-100%); transition: transform .5s cubic-bezier(.7,0,.2,1); }
+      .brief-mobile-menu.is-open { transform: none; }
+      .brief-mobile-menu nav { display: flex; flex-direction: column; gap: 1.4rem; }
+      .brief-mobile-menu a { font: 400 clamp(2.2rem, 9vw, 4rem)/1 var(--serif); }
+      .brief-mobile-menu a:last-child { margin-top: 2rem; font: .75rem/1 var(--sans); letter-spacing: .15em; text-transform: uppercase; }
+      .brief-menu-close { position: absolute; top: 1rem; right: var(--pad); display: flex; width: 2.75rem; height: 2.75rem; align-items: center; justify-content: center; border: 0; background: transparent; color: var(--ivory); cursor: pointer; }
+      .brief-menu-close span { position: absolute; width: 1.35rem; height: 1px; background: var(--ivory); }
+      .brief-menu-close span:first-child { transform: rotate(45deg); }
+      .brief-menu-close span:last-child { transform: rotate(-45deg); }
+      body.menu-open { overflow: hidden; }
+    }
     @media (max-width: 767px) {
       .brief-shell, .brief-intro, .brief-form-area, .field-grid, .option-grid { min-width: 0; max-width: 100%; }
       h1, h2, h3, p, a, button, span { max-width: 100%; overflow-wrap: break-word; }
@@ -27,7 +49,19 @@
     <a class="brand-mark" href="../index.html#top" aria-label="MIH Design — strona główna"><img src="../assets/brand/logo-01.svg" alt="Sygnet MIH Design" /></a>
     <a class="back-link" href="../index.html#top" data-i18n="back">← Wróć na stronę główną</a>
     <div class="language-switch" aria-label="Wybierz język"><button type="button" class="language-button is-active" data-lang="pl" aria-pressed="true">PL</button><span>/</span><button type="button" class="language-button" data-lang="en" aria-pressed="false">EN</button></div>
+    <button class="brief-menu-toggle" type="button" aria-expanded="false" aria-controls="brief-mobile-menu" aria-label="Otwórz menu" data-menu-toggle><span></span><span></span></button>
   </header>
+  <div class="brief-mobile-menu" id="brief-mobile-menu" aria-hidden="true" data-mobile-menu>
+    <button class="brief-menu-close" type="button" aria-label="Zamknij menu" data-menu-close><span></span><span></span></button>
+    <nav aria-label="Nawigacja mobilna">
+      <a href="../index.html#studio" data-i18n="studio">Studio</a>
+      <a href="../index.html#projects" data-i18n="projects">Projekty</a>
+      <a href="../index.html#services" data-i18n="services">Usługi</a>
+      <a href="../index.html#journal" data-i18n="journal">Journal</a>
+      <a href="../index.html#collection" data-i18n="shop">Sklep</a>
+      <a href="../brief/" data-i18n="cta">Przedstaw projekt</a>
+    </nav>
+  </div>
   <main class="brief-shell">
     <section class="brief-intro" aria-labelledby="brief-title"><p class="eyebrow" data-i18n="eyebrow">PRIVATE PROJECT BRIEF</p><h1 id="brief-title" data-i18n="title">Opowiedz nam<br /><em>o swoim projekcie.</em></h1><p class="intro-copy" data-i18n="intro">Każda współpraca zaczyna się od rozmowy. Krótki brief pomoże nam zrozumieć Twoją przestrzeń, potrzeby i zakres projektu.</p></section>
     <section class="brief-form-area" aria-label="Private Project Brief">
