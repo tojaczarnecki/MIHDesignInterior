@@ -47,13 +47,13 @@ document.querySelectorAll("[data-lang]").forEach(button=>button.addEventListener
 applyJournalFilter();normalizeTextFlow();
 function normalizeArrowPresentation(){document.querySelectorAll('.text-link span,.header-cta span,.brief-button span,.service-arrow,.journal-meta b,.scroll-hint b').forEach(el=>{el.textContent=el.textContent.replace('↗','↗︎').replace('→','→︎')})}
 normalizeArrowPresentation();
-const heroImage=document.querySelector("[data-hero-image]"),heroNav=document.querySelector("[data-hero-nav]");
+const heroImage=document.querySelector("[data-hero-image]"),heroNav=document.querySelector("[data-hero-nav]"),heroLabel=document.querySelector("[data-hero-label]"),heroProgress=document.querySelector("[data-hero-progress]");
 if(heroImage&&heroNav){
   const heroSlides=[
-    {image:"assets/hero/hero-studio.png",label:"Pracownia MIH Design pełna rzeźbiarskich detali i materiałów"},
-    {image:"assets/hero/hero-chandelier.png",label:"Żyrandol i klasyczne detale wnętrza"},
-    {image:"assets/hero/hero-cabinet.png",label:"Dekorowany mebel w głębokiej czerni"},
-    {image:"assets/hero/hero-staircase.png",label:"Reprezentacyjna klatka schodowa rezydencji"}
+    {image:"assets/hero/hero-studio.png",label:{pl:"Studio / Atelier",en:"Studio / Atelier"},alt:"Pracownia MIH Design pełna rzeźbiarskich detali i materiałów"},
+    {image:"assets/hero/hero-chandelier.png",label:{pl:"Światło / Oprawa",en:"Light / Form"},alt:"Żyrandol i klasyczne detale wnętrza"},
+    {image:"assets/hero/hero-cabinet.png",label:{pl:"Materiał / Detal",en:"Material / Detail"},alt:"Dekorowany mebel w głębokiej czerni"},
+    {image:"assets/hero/hero-staircase.png",label:{pl:"Realizacja / Dom",en:"Project / Residence"},alt:"Reprezentacyjna klatka schodowa rezydencji"}
   ];
   let activeHero=0,heroTimer;
   heroNav.innerHTML=heroSlides.map((_,index)=>`<button type="button" data-hero-slide="${index}" aria-label="Slajd ${String(index+1).padStart(2,"0")} z ${heroSlides.length}" aria-pressed="${index===0}">${String(index+1).padStart(2,"0")}</button>`).join("");
@@ -62,10 +62,11 @@ if(heroImage&&heroNav){
     activeHero=(index+heroSlides.length)%heroSlides.length;
     const slide=heroSlides[activeHero];
     heroImage.classList.add("is-transitioning");
-    window.setTimeout(()=>{heroImage.style.backgroundImage=`url("${slide.image}")`;heroImage.setAttribute("aria-label",slide.label);heroImage.classList.remove("is-transitioning")},260);
+    window.setTimeout(()=>{heroImage.style.backgroundImage=`url("${slide.image}")`;heroImage.setAttribute("aria-label",slide.alt);if(heroLabel)heroLabel.textContent=slide.label[lang];if(heroProgress)heroProgress.style.width=`${((activeHero+1)/heroSlides.length)*100}%`;heroImage.classList.remove("is-transitioning")},260);
     heroButtons.forEach((button,buttonIndex)=>{const selected=buttonIndex===activeHero;button.classList.toggle("is-active",selected);button.setAttribute("aria-pressed",String(selected))});
   }
   const restartHeroTimer=()=>{window.clearInterval(heroTimer);heroTimer=window.setInterval(()=>showHeroSlide(activeHero+1),6500)};
   heroButtons.forEach(button=>button.addEventListener("click",()=>{showHeroSlide(Number(button.dataset.heroSlide));restartHeroTimer()}));
+  document.querySelectorAll("[data-lang]").forEach(button=>button.addEventListener("click",()=>{if(heroLabel)heroLabel.textContent=heroSlides[activeHero].label[document.documentElement.lang]}));
   showHeroSlide(0);restartHeroTimer();
 }

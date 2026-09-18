@@ -281,15 +281,20 @@
       .hero-slider-nav { position: absolute; right: var(--pad); bottom: 2.8rem; display: flex; gap: 1rem; align-items: center; }
       .hero-slider-nav button { min-width: 1.6rem; padding: .35rem 0; border: 0; border-bottom: 1px solid transparent; background: transparent; color: rgba(255,255,255,.55); cursor: pointer; font: .62rem/1 var(--sans); letter-spacing: .12em; transition: color .3s ease, border-color .3s ease; }
       .hero-slider-nav button:hover, .hero-slider-nav button.is-active { color: #ffffff; border-color: #ffffff; }
+      .hero-slider-meta { position: absolute; left: var(--pad); bottom: 2.8rem; display: flex; align-items: center; gap: 1rem; color: rgba(247,244,237,.72); font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; }
+      .hero-progress { display: block; width: clamp(5rem, 9vw, 8rem); height: 1px; overflow: hidden; background: rgba(247,244,237,.3); }
+      .hero-progress i { display: block; width: 25%; height: 100%; background: var(--ivory); transition: width .55s ease; }
       @media (max-width: 900px) {
         .hero-slider-content { padding: 6rem var(--pad) 5rem; }
         .hero-slider-content h1 { max-width: 9ch; }
         .hero-slider-nav { right: var(--pad); bottom: 2rem; }
+        .hero-slider-meta { left: var(--pad); bottom: 2rem; }
       }
       @media (max-width: 480px) {
         .hero-slider-content { padding: 5rem var(--pad) 4rem; }
         .hero-slider-content h1 { max-width: 8ch; font-size: clamp(3rem, 14.5vw, 4.8rem); }
         .hero-slider-nav { bottom: 1.5rem; }
+        .hero-slider-meta { bottom: 1.5rem; max-width: 45%; line-height: 1.4; }
       }
     </style>
   </head>
@@ -339,6 +344,7 @@
           <h1 id="hero-title" data-i18n="heroTitle">Przestrzenie<br /><em>z charakterem.</em></h1>
           <a class="text-link text-link-light" href="#projects" data-i18n="heroCta">Zobacz nasze realizacje <span>↗</span></a>
         </div>
+        <div class="hero-slider-meta" aria-live="polite"><span data-hero-label>Studio / Atelier</span><span class="hero-progress" aria-hidden="true"><i data-hero-progress></i></span></div>
         <div class="hero-slider-nav" data-hero-nav aria-label="Wybierz slajd"></div>
         <a class="scroll-cue" href="#studio" aria-label="Przewiń do sekcji Studio"><span></span><small>Scroll to explore</small></a>
       </section>
