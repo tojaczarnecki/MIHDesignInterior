@@ -35,6 +35,13 @@
         h1, h2, h3 { text-wrap: balance; }
       }
     </style>
+    <style>
+      @media (max-width: 767px) {
+        .hero-title-block h1 { width: 100%; font-size: clamp(3.2rem, 15vw, 5.6rem); line-height: .92; }
+        .idea h2, .material-copy h2, .project-film h2, .credits-grid h2 { width: 100%; min-width: 0; font-size: clamp(2.15rem, 10.5vw, 4rem); line-height: .98; overflow-wrap: break-word; }
+        .hero-statement, .idea-copy p, .material-text, .film-inner > p, .credits-grid p { max-width: 100%; min-width: 0; }
+      }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#content" data-i18n="skip">Przejdź do treści</a>

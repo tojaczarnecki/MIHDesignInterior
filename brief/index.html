@@ -43,6 +43,13 @@
       h1, h2, h3 { text-wrap: balance; }
     }
   </style>
+  <style>
+    @media (max-width: 767px) {
+      .brief-intro h1 { width: 100%; min-width: 0; font-size: clamp(2.6rem, 13vw, 4.8rem); line-height: .96; overflow-wrap: break-word; }
+      .brief-step legend { max-width: 100%; font-size: clamp(2rem, 9.5vw, 3.4rem); line-height: .98; overflow-wrap: break-word; }
+    }
+    @media (max-width: 850px) { .brief-header { grid-template-columns: 1fr auto auto; } .brief-header .language-switch { grid-column: 2; } .brief-menu-toggle { grid-column: 3; } }
+  </style>
 </head>
 <body>
   <header class="brief-header">
