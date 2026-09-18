@@ -283,7 +283,7 @@
       .hero-slider-nav button { min-width: 1.6rem; padding: .35rem 0; border: 0; border-bottom: 1px solid transparent; background: transparent; color: rgba(255,255,255,.55); cursor: pointer; font: .62rem/1 var(--sans); letter-spacing: .12em; transition: color .3s ease, border-color .3s ease; }
       .hero-slider-nav button:hover, .hero-slider-nav button.is-active { color: #ffffff; border-color: #ffffff; }
       /* Féau-inspired header: quiet identity bar, navigation revealed on demand. */
-      .site-header { display: flex; justify-content: space-between; align-items: center; padding: 1.1rem var(--pad); border-bottom: 1px solid rgba(247,244,237,.3); }
+      .site-header { display: flex; justify-content: space-between; align-items: center; padding: 1.1rem var(--pad); border-bottom: 0; }
       .site-header .header-context, .site-header .desktop-nav, .site-header .header-actions { display: none !important; }
       .site-header .logo { width: clamp(8.8rem, 13vw, 12rem); }
       .site-header .menu-toggle { display: flex; position: relative; z-index: 30; width: 2.8rem; height: 2.8rem; padding: .65rem; flex-direction: column; align-items: center; justify-content: center; }
@@ -300,6 +300,7 @@
         .site-header .header-context { display: none; }
         .site-header .logo { order: 2; width: clamp(9rem, 12vw, 12.5rem); margin-inline: auto; }
         .site-header .desktop-nav { order: 1; display: flex !important; flex: 1 1 0; justify-content: flex-start; gap: clamp(1.5rem, 2.8vw, 3.4rem); }
+        .site-header .desktop-nav { border-top: 0; }
         .site-header .desktop-nav a { font-size: .68rem; letter-spacing: .05em; }
         .site-header .desktop-nav a:nth-child(4), .site-header .desktop-nav a:nth-child(5) { display: none; }
         .site-header .menu-toggle { display: none; }
