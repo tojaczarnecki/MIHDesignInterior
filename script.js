@@ -38,6 +38,7 @@ translations.en.journalEyebrow="MIH JOURNAL";translations.en.journalTitle="Stori
 translations.pl.journalFilterAll="Wszystko";translations.pl.journalFilterJournal="Journal";translations.pl.journalFilterInstagram="Instagram";translations.pl.journalFilterVideo="Video";translations.pl.journalFilterPress="Press";translations.pl.journalFilterStudio="Notatki ze studia";
 translations.en.journalFilterAll="All";translations.en.journalFilterJournal="Journal";translations.en.journalFilterInstagram="Instagram";translations.en.journalFilterVideo="Video";translations.en.journalFilterPress="Press";translations.en.journalFilterStudio="Studio notes";
 translations.pl.scrollHint="Przesuń, aby zobaczyć więcej";translations.en.scrollHint="Swipe to explore more";
+translations.pl.briefTitle="Opowiedz nam&nbsp;o swoim projekcie.";translations.en.briefTitle="Tell us about your project.";
 setLanguage(lang);
 let journalFilter="all";
 function applyJournalFilter(){journalGrid.querySelectorAll(".journal-card:not(.loop-clone)").forEach(card=>{const visible=journalFilter==="all"||card.dataset.category===journalFilter;card.hidden=!visible});document.querySelectorAll("[data-journal-filter]").forEach(button=>{const active=button.dataset.journalFilter===journalFilter;button.classList.toggle("is-active",active);button.setAttribute("aria-pressed",active)});refreshLoopingScrollers()}
