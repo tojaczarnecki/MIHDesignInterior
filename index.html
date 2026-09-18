@@ -154,6 +154,8 @@
         .studio, .services, .collection { padding-block: clamp(4.75rem, 15vw, 6.5rem); }
         .scroll-hint { display: flex; }
         .projects .project-grid, .journal .journal-grid { display: flex; grid-template-columns: none; gap: 0 1rem; overflow-x: auto; overflow-y: hidden; margin-right: calc(var(--pad) * -1); padding-right: var(--pad); scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+        .projects .project-grid, .journal .journal-grid { scroll-behavior: smooth; overscroll-behavior-inline: contain; }
+        .projects .project-card, .journal .journal-card { opacity: calc(.72 + .28 * var(--carousel-focus, 0)); transform: scale(var(--carousel-scale, .975)); transform-origin: center center; transition: opacity .35s ease, transform .45s cubic-bezier(.2,.7,.2,1); }
         .projects .project-grid::-webkit-scrollbar, .journal .journal-grid::-webkit-scrollbar { display: none; }
         .projects .project-card, .journal .journal-card { flex: 0 0 78vw; max-width: 320px; scroll-snap-align: start; }
         .projects .project-grid { row-gap: 0; }
