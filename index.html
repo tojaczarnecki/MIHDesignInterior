@@ -168,9 +168,11 @@
       img, svg, video { max-width: 100%; }
       @media (max-width: 767px) {
         main, section, .container, .studio-grid, .services-grid, .collection-grid, .founders-content, .studio-copy, .services-side, .collection-grid > *, .brief-inner { min-width: 0; max-width: 100%; }
-        .container { width: calc(100% - 2 * var(--pad)); }
-        h1, h2, h3, p, a, button, span { max-width: 100%; overflow-wrap: break-word; }
-        h1, h2, h3 { text-wrap: balance; }
+        .container { width: 100%; padding-inline: 24px; }
+        .site-header { width: 100%; max-width: 100%; padding-inline: 20px; }
+        h1, h2, h3 { width: 100%; max-width: 100%; height: auto; min-height: 0; max-height: none; overflow: visible; white-space: normal; word-break: normal; overflow-wrap: normal; text-wrap: balance; }
+        p, a, button { max-width: 100%; min-width: 0; overflow-wrap: normal; }
+        .hero-content, .section-heading, .studio-grid, .services-grid, .collection-grid, .founders-content, .brief-inner { overflow: visible; height: auto; max-height: none; transform: none; }
         .hero-content h1, .section-heading h2, .brief h2 { font-size: clamp(2.65rem, 13vw, 4.4rem); }
         .studio-copy > p, .services-intro, .collection-copy, .brief-copy, .journal-intro { max-width: 100%; font-size: clamp(.95rem, 4.8vw, 1.2rem); }
         .studio-words { max-width: 100%; gap: .45rem .8rem; letter-spacing: .08em; }
