@@ -177,7 +177,7 @@
         .hero-content, .section-heading, .studio-grid, .services-grid, .collection-grid, .founders-content, .brief-inner { overflow: visible; height: auto; max-height: none; transform: none; }
         .studio-grid, .services-grid, .collection-grid { grid-template-columns: minmax(0, 1fr); }
         .section-heading, .journal-heading { width: 100%; min-width: 0; }
-        .studio h2, .founders h2, .services h2, .projects h2, .journal h2, .collection h2, .brief h2 { width: 100%; max-width: 100%; min-width: 0; }
+        .studio h2, .founders h2, .services h2, .projects h2, .journal h2, .collection h2, .brief h2 { width: 100%; max-width: 100%; min-width: 0; font-size: clamp(2.15rem, 10vw, 4rem); line-height: .98; letter-spacing: -.045em; }
         .hero-content { padding-inline: 24px; }
         .hero-index { right: 24px; }
         .hero-content h1, .section-heading h2, .brief h2 { font-size: clamp(2.65rem, 13vw, 4.4rem); }
@@ -192,6 +192,7 @@
       @media (max-width: 360px) {
         :root { --pad: 1rem; }
         .hero-content h1, .section-heading h2, .brief h2 { font-size: clamp(2.45rem, 12.5vw, 3.6rem); }
+        .studio h2, .founders h2, .services h2, .projects h2, .journal h2, .collection h2 { font-size: clamp(2rem, 10.5vw, 3.35rem); }
         .hero-subtitle { font-size: 1rem; }
       }
     </style>
