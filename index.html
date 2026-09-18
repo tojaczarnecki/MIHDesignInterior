@@ -231,11 +231,13 @@
     <style>
       /* MIH atelier direction: deep ink, warm ivory and stone neutrals. */
       :root { --ink: #151411; --ivory: #f7f4ed; --stone: #8b8174; --line: rgba(247,244,237,.22); --line-dark: rgba(21,20,17,.16); }
-      body, .section-dark { background-color: var(--ink); color: var(--ivory); }
+      html { background: var(--ivory); }
+      body { background-color: var(--ivory); color: var(--ink); }
+      .section-dark { background-color: var(--ink); color: var(--ivory); }
       .section-light { background-color: var(--ivory); color: var(--ink); }
       .studio { background: #f7f4ed; color: var(--ink); }
-      .projects { background: #ece7dd; color: var(--ink); }
-      .journal { background: #e3ddd2; color: var(--ink); }
+      .projects { background: var(--ivory); color: var(--ink); }
+      .journal { background: var(--ivory); color: var(--ink); }
       .collection { background: #f7f4ed; color: var(--ink); }
       .studio h2 em, .projects h2 em, .journal h2 em, .collection h2 em, .collection-mark, .service-number, .services-intro, .quote-credit { color: var(--stone); }
       .studio-words span:not(:last-child)::after { color: var(--stone); }
