@@ -27,14 +27,14 @@
       .project-placeholder h1 em { color: #777777; }
       .project-placeholder-image { filter: grayscale(1); }
       @media (min-width: 901px) {
-        .project-header { grid-template-columns: 1fr auto; grid-template-areas: "logo actions" "nav nav"; row-gap: 1rem; }
-        .project-header .brand-mark { grid-area: logo; }
-        .project-header .header-cta { grid-area: actions; }
-        .project-header .desktop-nav { grid-area: nav; justify-content: flex-start; padding-top: .8rem; border-top: 1px solid rgba(255,255,255,.24); }
+        .project-header { grid-template-columns: 1fr auto 1fr; grid-template-areas: "spacer logo actions" "nav nav nav"; row-gap: 1rem; }
+        .project-header .brand-mark { grid-area: logo; justify-self: center; }
+        .project-header .header-cta { display: none; }
+        .project-header .desktop-nav { grid-area: nav; justify-content: center; padding-top: .8rem; border-top: 1px solid rgba(255,255,255,.24); }
       }
       @media (max-width: 900px) {
         .project-header { grid-template-columns: 1fr auto auto; grid-template-areas: "logo actions menu"; }
-        .project-header .brand-mark { grid-area: logo; }
+        .project-header .brand-mark { grid-area: logo; justify-self: start; }
         .project-header .menu-toggle { grid-area: menu; }
       }
     </style>
