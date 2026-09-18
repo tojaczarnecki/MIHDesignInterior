@@ -44,6 +44,15 @@
         .hero-statement, .idea-copy p, .material-text, .film-inner > p, .credits-grid p { max-width: 100%; min-width: 0; }
       }
     </style>
+      <style>
+        :root { --ink: #080808; --ivory: #ffffff; --paper: #ffffff; --stone: #777777; --muted: rgba(255,255,255,.66); }
+        .section-ivory { background: #ffffff; color: #080808; }
+        .section-dark, .project-footer { background: #080808; color: #ffffff; }
+        .hero-shade { background: linear-gradient(90deg, rgba(0,0,0,.74), rgba(0,0,0,.12) 72%), linear-gradient(0deg, rgba(0,0,0,.72), transparent 58%); }
+        .project-hero > img, .project-full-image img, .gallery-image img { filter: grayscale(1); }
+        .material-copy h2 em, .project-film h2 em, .credits-grid h2 em, .hero-meta i, .film-link b { color: #777777; }
+        .idea-copy p, .credits-grid p:not(.eyebrow) { color: rgba(0,0,0,.64); }
+      </style>
   </head>
   <body>
     <a class="skip-link" href="#content" data-i18n="skip">Przejdź do treści</a>

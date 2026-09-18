@@ -53,6 +53,13 @@
     @media (max-width: 850px) { .brief-header { grid-template-columns: 1fr auto auto; } .brief-header .language-switch { grid-column: 2; } .brief-menu-toggle { grid-column: 3; } }
     @media (max-width: 360px) { .brief-intro h1 { font-size: clamp(2.15rem, 10vw, 3.2rem); text-wrap: normal; } }
   </style>
+  <style>
+    :root { --ink: #080808; --ivory: #ffffff; --paper: #ffffff; --stone: #777777; --line: rgba(0,0,0,.2); }
+    .brief-header, .brief-mobile-menu { background: #080808; color: #ffffff; }
+    .brief-intro h1 em, .button span, .text-link span, .choice b { color: #777777; }
+    .choice:hover, .choice:has(input:checked) { border-color: #080808; }
+    .choice:has(input:checked) { background: rgba(0,0,0,.06); }
+  </style>
 </head>
 <body>
   <header class="brief-header">

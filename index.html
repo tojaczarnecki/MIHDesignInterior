@@ -228,6 +228,23 @@
         .hero-subtitle { font-size: 1rem; }
       }
     </style>
+    <style>
+      /* Monochrome MIH direction: black, white and neutral photography only. */
+      :root { --ink: #080808; --ivory: #ffffff; --stone: #777777; --line: rgba(255,255,255,.22); --line-dark: rgba(0,0,0,.18); }
+      body, .section-light, .section-dark { background-color: var(--ink); color: var(--ivory); }
+      .studio, .projects, .journal, .collection { background: #ffffff; color: #080808; }
+      .studio h2 em, .projects h2 em, .journal h2 em, .collection h2 em, .collection-mark, .service-number, .services-intro, .quote-credit { color: #777777; }
+      .studio-words span:not(:last-child)::after { color: #777777; }
+      .hero-image, .founders-image-wrap img, .project-media img, .journal-media img { filter: grayscale(1); }
+      .project-card:hover .project-media img, .journal-card:hover .journal-media img { filter: grayscale(1); }
+      .journal-media { background: #eeeeee; }
+      .studio-words, .project-info, .journal-filters { border-color: rgba(0,0,0,.18); }
+      .journal-filter, .journal-type, .journal-meta, .journal-info p, .journal-intro { color: rgba(0,0,0,.58); }
+      .brief-button:hover { background: #ffffff; color: #080808; }
+      .site-footer { background: #080808; color: #ffffff; }
+      .footer-top p, .footer-bottom, .footer-bottom p { color: #888888; }
+      .footer-bottom { border-color: rgba(255,255,255,.22); }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main-content" data-i18n="skip">Przejdź do treści</a>
