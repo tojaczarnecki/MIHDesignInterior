@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="project.css" />
     <style>
       /* The gallery stays deliberately quiet: one consistent image rhythm. */
-      .gallery-grid { display: flex; gap: clamp(1rem, 2.2vw, 2.2rem); overflow-x: auto; overflow-y: hidden; margin-right: calc(var(--pad) * -1); padding-right: var(--pad); scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; align-items: start; }
+      .gallery-grid { display: flex; flex-direction: row; gap: clamp(1rem, 2.2vw, 2.2rem); overflow-x: auto; overflow-y: hidden; margin-right: calc(var(--pad) * -1); padding-right: var(--pad); scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; align-items: start; scroll-behavior: smooth; }
       .gallery-grid::-webkit-scrollbar { display: none; }
       .gallery-image, .gallery-image-wide, .gallery-image-tall, .gallery-image-detail { width: 100%; height: auto; max-height: none; margin: 0; aspect-ratio: 4 / 5; }
       .gallery-image, .gallery-image-wide, .gallery-image-tall, .gallery-image-detail { flex: 0 0 clamp(22rem, 36vw, 32rem); scroll-snap-align: start; }
@@ -22,7 +22,7 @@
       .gallery-scroll-hint b { display: inline-flex; width: 2.15rem; height: 1.5rem; align-items: center; justify-content: center; border: 1px solid currentColor; font-size: 1rem; font-weight: 400; line-height: 1; }
       .header-cta span, .text-link span, .film-link b, .gallery-scroll-hint b { font-family: Arial, Helvetica, sans-serif; font-variant-emoji: text; }
       @media (max-width: 600px) {
-        .gallery-grid { gap: 0 1rem; }
+        .gallery-grid { flex-direction: row; gap: 0 1rem; }
         .gallery-image, .gallery-image-wide, .gallery-image-tall, .gallery-image-detail { flex: 0 0 78vw; max-width: 320px; aspect-ratio: 4 / 5; scroll-snap-align: start; }
       }
     </style>
