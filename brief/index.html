@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Private Project Brief — opowiedz MIH Design o swoim projekcie wnętrzarskim." />
+  <meta name="theme-color" content="#151411" />
+  <title>Private Project Brief — MIH Design</title>
+  <link rel="icon" type="image/webp" href="../assets/brand/mih-favicon.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:wght@400;500;600&family=Geomini:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="brief.css" />
+</head>
+<body>
+  <header class="brief-header">
+    <a class="brand-mark" href="../index.html#top" aria-label="MIH Design — strona główna"><img src="../assets/brand/logo-01.svg" alt="Sygnet MIH Design" /></a>
+    <a class="back-link" href="../index.html#top" data-i18n="back">← Wróć na stronę główną</a>
+    <div class="language-switch" aria-label="Wybierz język"><button type="button" class="language-button is-active" data-lang="pl" aria-pressed="true">PL</button><span>/</span><button type="button" class="language-button" data-lang="en" aria-pressed="false">EN</button></div>
+  </header>
+  <main class="brief-shell">
+    <section class="brief-intro" aria-labelledby="brief-title"><p class="eyebrow" data-i18n="eyebrow">PRIVATE PROJECT BRIEF</p><h1 id="brief-title" data-i18n="title">Opowiedz nam<br /><em>o swoim projekcie.</em></h1><p class="intro-copy" data-i18n="intro">Każda współpraca zaczyna się od rozmowy. Krótki brief pomoże nam zrozumieć Twoją przestrzeń, potrzeby i zakres projektu.</p></section>
+    <section class="brief-form-area" aria-label="Private Project Brief">
+      <div class="progress-row"><span data-progress-label>01 / 04</span><span class="progress-track"><i data-progress-bar></i></span><span data-progress-name>Projekt</span></div>
+      <form id="project-brief-form" novalidate>
+        <fieldset class="brief-step is-active" data-step="1"><legend data-i18n="step1Title">Zacznijmy od podstaw.</legend><p class="step-copy" data-i18n="step1Copy">Jaki rodzaj przestrzeni chcesz stworzyć?</p><div class="option-grid">
+          <label class="choice"><input type="radio" name="projectType" value="Private residence" required /><span data-i18n="privateResidence">Rezydencja prywatna</span><b>01</b></label><label class="choice"><input type="radio" name="projectType" value="Apartment" /><span data-i18n="apartment">Apartament</span><b>02</b></label><label class="choice"><input type="radio" name="projectType" value="Hospitality" /><span>Hospitality / boutique</span><b>03</b></label><label class="choice"><input type="radio" name="projectType" value="Other" /><span data-i18n="other">Inny projekt</span><b>04</b></label>
+        </div></fieldset>
+        <fieldset class="brief-step" data-step="2" hidden><legend data-i18n="step2Title">Poznajmy przestrzeń.</legend><p class="step-copy" data-i18n="step2Copy">Kilka informacji pomoże nam ocenić skalę i etap projektu.</p><div class="field-grid"><label class="field"><span data-i18n="locationLabel">Lokalizacja</span><input name="location" required placeholder="Warsaw, Spain, London…" /></label><label class="field"><span data-i18n="areaLabel">Metraż</span><select name="area" required><option value="" data-i18n="choose">Wybierz</option><option>do 100 m²</option><option>100–250 m²</option><option>250–500 m²</option><option>500+ m²</option><option data-i18n="notKnown">Jeszcze nie wiem</option></select></label><label class="field"><span data-i18n="stageLabel">Etap inwestycji</span><select name="stage" required><option value="" data-i18n="choose">Wybierz</option><option data-i18n="planning">Planowanie / zakup</option><option data-i18n="construction">W budowie</option><option data-i18n="renovation">Remont</option><option data-i18n="ready">Przestrzeń gotowa</option></select></label></div></fieldset>
+        <fieldset class="brief-step" data-step="3" hidden><legend data-i18n="step3Title">Co możemy stworzyć razem?</legend><p class="step-copy" data-i18n="step3Copy">Wybierz zakres, który najlepiej opisuje Twoje potrzeby.</p><div class="option-grid"><label class="choice"><input type="checkbox" name="scope" value="Interior architecture" /><span data-i18n="scopeArchitecture">Architektura wnętrz</span><b>+</b></label><label class="choice"><input type="checkbox" name="scope" value="Interior design" /><span data-i18n="scopeDesign">Projekt wnętrz</span><b>+</b></label><label class="choice"><input type="checkbox" name="scope" value="Styling" /><span>Styling / art direction</span><b>+</b></label><label class="choice"><input type="checkbox" name="scope" value="Consultation" /><span data-i18n="scopeConsultation">Konsultacja</span><b>+</b></label></div><label class="field budget-field"><span data-i18n="budgetLabel">Orientacyjny budżet realizacji</span><select name="budget" required><option value="" data-i18n="choose">Wybierz</option><option>€50k–€100k</option><option>€100k–€250k</option><option>€250k–€500k</option><option>€500k+</option><option data-i18n="preferDiscuss">Wolę porozmawiać</option></select></label></fieldset>
+        <fieldset class="brief-step" data-step="4" hidden><legend data-i18n="step4Title">Ostatni krok — poznajmy się.</legend><p class="step-copy" data-i18n="step4Copy">Zostaw kontakt i kilka zdań o tym, czego potrzebujesz.</p><div class="field-grid"><label class="field"><span data-i18n="nameLabel">Imię i nazwisko</span><input name="name" autocomplete="name" required /></label><label class="field"><span data-i18n="emailLabel">Adres e-mail</span><input name="email" type="email" autocomplete="email" required /></label><label class="field full-field"><span data-i18n="messageLabel">Opowiedz krótko o projekcie</span><textarea name="message" rows="5"></textarea></label></div></fieldset>
+        <p class="form-error" role="alert" aria-live="polite"></p><div class="form-actions"><button class="button button-back" type="button" data-back hidden data-i18n="backButton">Wstecz</button><button class="button button-next" type="button" data-next data-i18n="nextButton">Dalej <span>→</span></button><button class="button button-submit" type="submit" data-submit hidden data-i18n="submitButton">Wyślij brief <span>↗</span></button></div>
+      </form>
+      <p class="privacy-note" data-i18n="privacy">Wysyłając brief, rozpoczynasz rozmowę — nie zobowiązujesz się jeszcze do współpracy.</p>
+      <div class="success-message" data-success hidden><p class="eyebrow" data-i18n="successEyebrow">DZIĘKUJEMY</p><h2 data-i18n="successTitle">Twój brief jest gotowy.</h2><p data-i18n="successCopy">Otworzyliśmy Twoją aplikację pocztową, abyś mógł wysłać wiadomość do MIH Design.</p><a class="text-link" href="../index.html#top" data-i18n="successCta">Wróć na stronę główną <span>↗</span></a></div>
+    </section>
+  </main>
+  <script src="brief.js"></script>
+</body>
+</html>
