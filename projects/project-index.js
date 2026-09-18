@@ -12,3 +12,4 @@ document.querySelector("#project-title").innerHTML=`${project.name}<br><em>${pro
 const image=document.querySelector("#project-image"); image.src=project.image; image.alt=`${project.name} — ${project.type}`;
 document.querySelector("#project-meta").textContent=`${project.type} · ${project.year}`;
 document.querySelector("#project-copy").textContent=project.copy;
+const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let node;while(node=walker.nextNode())node.nodeValue=node.nodeValue.replace(/↗(?!︎)/g,"↗︎").replace(/→(?!︎)/g,"→︎").replace(/←(?!︎)/g,"←︎");
