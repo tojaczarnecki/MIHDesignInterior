@@ -229,23 +229,29 @@
       }
     </style>
     <style>
-      /* Monochrome MIH direction: black, white and neutral photography only. */
-      :root { --ink: #080808; --ivory: #ffffff; --stone: #777777; --line: rgba(255,255,255,.22); --line-dark: rgba(0,0,0,.18); }
-      body, .section-light, .section-dark { background-color: var(--ink); color: var(--ivory); }
-      .studio, .projects, .journal, .collection { background: #ffffff; color: #080808; }
-      .studio h2 em, .projects h2 em, .journal h2 em, .collection h2 em, .collection-mark, .service-number, .services-intro, .quote-credit { color: #777777; }
-      .studio-words span:not(:last-child)::after { color: #777777; }
-      .hero-image, .founders-image-wrap img, .project-media img, .journal-media img { filter: grayscale(1); }
-      .project-card:hover .project-media img, .journal-card:hover .journal-media img { filter: grayscale(1); }
+      /* MIH atelier direction: deep ink, warm ivory and stone neutrals. */
+      :root { --ink: #151411; --ivory: #f7f4ed; --stone: #8b8174; --line: rgba(247,244,237,.22); --line-dark: rgba(21,20,17,.16); }
+      body, .section-dark { background-color: var(--ink); color: var(--ivory); }
+      .section-light { background-color: var(--ivory); color: var(--ink); }
+      .studio { background: #f7f4ed; color: var(--ink); }
+      .projects { background: #ece7dd; color: var(--ink); }
+      .journal { background: #e3ddd2; color: var(--ink); }
+      .collection { background: #f7f4ed; color: var(--ink); }
+      .studio h2 em, .projects h2 em, .journal h2 em, .collection h2 em, .collection-mark, .service-number, .services-intro, .quote-credit { color: var(--stone); }
+      .studio-words span:not(:last-child)::after { color: var(--stone); }
+      .hero-overlay { background: rgba(0,0,0,.28); }
       .hero-image, .founders-image-wrap img, .project-media img, .journal-media img,
       .project-card:hover .project-media img, .journal-card:hover .journal-media img { filter: none; }
-      .journal-media { background: #eeeeee; }
-      .studio-words, .project-info, .journal-filters { border-color: rgba(0,0,0,.18); }
-      .journal-filter, .journal-type, .journal-meta, .journal-info p, .journal-intro { color: rgba(0,0,0,.58); }
-      .brief-button:hover { background: #ffffff; color: #080808; }
-      .site-footer { background: #080808; color: #ffffff; }
-      .footer-top p, .footer-bottom, .footer-bottom p { color: #888888; }
-      .footer-bottom { border-color: rgba(255,255,255,.22); }
+      .journal-media { background: #c8bfb0; }
+      .studio-words, .project-info, .journal-filters { border-color: var(--line-dark); }
+      .journal-filter, .journal-type, .journal-meta, .journal-info p, .journal-intro { color: rgba(21,20,17,.62); }
+      .brief-button:hover { background: var(--ivory); color: var(--ink); }
+      .site-footer { background: #151411; color: var(--ivory); }
+      .footer-top p, .footer-bottom, .footer-bottom p { color: rgba(247,244,237,.62); }
+      .footer-bottom { border-color: var(--line); }
+      .atelier-note { max-width: 24rem; margin-top: 1.35rem; color: rgba(21,20,17,.62); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; }
+      .footer-channel { display: inline-flex; margin-top: .8rem; color: var(--ivory); font-size: .65rem; letter-spacing: .16em; text-transform: uppercase; }
+      @media (max-width: 767px) { .atelier-note { margin-top: 1rem; font-size: .6rem; line-height: 1.55; } }
       @media (min-width: 901px) {
         .site-header { grid-template-columns: 1fr auto 1fr; grid-template-areas: "spacer logo actions" "nav nav nav"; row-gap: 1rem; padding-top: 1.25rem; }
         .site-header .logo { grid-area: logo; justify-self: center; }
@@ -335,14 +341,15 @@
       <section class="studio section-light" id="studio" aria-labelledby="studio-title">
         <div class="container studio-grid">
           <div class="reveal">
-            <p class="eyebrow eyebrow-dark" data-i18n="studioEyebrow">THE STUDIO</p>
+            <p class="eyebrow eyebrow-dark" data-i18n="studioEyebrow">THE STUDIO / ATELIER</p>
             <h2 id="studio-title" data-i18n="studioTitle">Projektujemy<br /><em>przestrzeń z sensem.</em></h2>
           </div>
           <div class="studio-copy reveal reveal-delay">
             <p data-i18n="studioCopy">MIH Design to międzynarodowe studio architektury wnętrz, tworzone z pasji do ludzi, miejsc i ponadczasowego piękna. Łączymy estetykę z funkcjonalnością, kreując przestrzenie dopasowane do Twojego stylu życia.</p>
             <div class="studio-words" aria-label="Wartości MIH Design">
-              <span data-i18n="word1">LUDZIE</span><span data-i18n="word2">MATERIAŁ</span><span data-i18n="word3">ŚWIATŁO</span>
+              <span data-i18n="word1">LUDZIE</span><span data-i18n="word2">MATERIAŁ</span><span data-i18n="word3">ŚWIATŁO</span><span data-i18n="word4">DETAL</span>
             </div>
+            <p class="atelier-note" data-i18n="atelierNote">Od szkicu do ostatniego detalu — zespół, który prowadzi projekt przez cały proces.</p>
             <a class="text-link text-link-dark" href="#founders" data-i18n="studioCta">Poznaj studio <span>↗</span></a>
           </div>
         </div>
@@ -411,8 +418,8 @@
 
     <footer class="site-footer section-dark" id="footer">
       <div class="container footer-top"><a class="logo" href="#top"><img src="assets/brand/mih-logo-white.webp" alt="MIH Design" /></a><p data-i18n="footerTagline">Interiors with a sense of place.</p><p>Warsaw · London · Worldwide</p></div>
-      <div class="container footer-bottom"><nav aria-label="Linki stopki"><a href="#studio" data-i18n="navStudio">Studio</a><a href="#projects" data-i18n="navProjects">Projekty</a><a href="#services" data-i18n="navServices">Usługi</a><a href="#journal" data-i18n="navJournal">Journal</a><a href="#collection" data-i18n="navShop">Sklep</a><a href="brief/" data-i18n="footerContact">Kontakt</a></nav><div class="socials"><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a><a href="https://pinterest.com" target="_blank" rel="noreferrer">Pinterest</a><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></div><p>© 2026 MIH Design</p></div>
+      <div class="container footer-bottom"><nav aria-label="Linki stopki"><a href="#studio" data-i18n="navStudio">Studio</a><a href="#projects" data-i18n="navProjects">Projekty</a><a href="#services" data-i18n="navServices">Usługi</a><a href="#journal" data-i18n="navJournal">Journal</a><a href="#collection" data-i18n="navShop">Sklep</a><a href="brief/" data-i18n="footerContact">Kontakt</a></nav><div class="socials"><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a><a class="footer-channel" href="https://magdalenahofman.substack.com/" target="_blank" rel="noopener noreferrer">Substack ↗</a></div><p>© 2026 MIH Design</p></div>
     </footer>
-    <script src="script.js?v=f280954"></script>
+    <script src="script.js?v=atelier-20260918"></script>
   </body>
 </html>
