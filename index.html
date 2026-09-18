@@ -251,6 +251,7 @@
       .site-footer { background: #151411; color: var(--ivory); }
       .footer-top p, .footer-bottom, .footer-bottom p { color: rgba(247,244,237,.62); }
       .footer-bottom { border-color: var(--line); }
+      .header-context { grid-area: spacer; justify-self: start; color: rgba(247,244,237,.58); font-size: .58rem; letter-spacing: .2em; text-transform: uppercase; }
       .atelier-note { max-width: 24rem; margin-top: 1.35rem; color: rgba(21,20,17,.62); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; }
       .footer-channel { display: inline-flex; margin-top: .8rem; color: var(--ivory); font-size: .65rem; letter-spacing: .16em; text-transform: uppercase; }
       @media (max-width: 767px) { .atelier-note { margin-top: 1rem; font-size: .6rem; line-height: 1.55; } }
@@ -261,6 +262,7 @@
         .site-header .header-actions { grid-area: actions; justify-self: end; }
         .site-header .header-cta { display: none; }
       }
+      @media (max-width: 900px) { .header-context { display: none; } }
       @media (max-width: 900px) {
         .site-header { grid-template-columns: 1fr auto auto; grid-template-areas: "logo actions menu"; }
         .site-header .logo { grid-area: logo; justify-self: start; }
@@ -294,6 +296,7 @@
   <body>
     <a class="skip-link" href="#main-content" data-i18n="skip">Przejdź do treści</a>
     <header class="site-header" data-header>
+      <span class="header-context" aria-hidden="true">MIH / Atelier</span>
       <a class="logo" href="#top" aria-label="MIH Design — strona główna"><img src="assets/brand/mih-logo-white.webp" alt="MIH Design" /></a>
       <nav class="desktop-nav" aria-label="Główna nawigacja">
         <a href="#studio" data-i18n="navStudio">Studio</a>
