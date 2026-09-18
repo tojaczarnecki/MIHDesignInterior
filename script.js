@@ -63,7 +63,7 @@ if(heroImage&&heroNav){
     activeHero=(index+heroSlides.length)%heroSlides.length;
     const slide=heroSlides[activeHero];
     heroImage.classList.add("is-transitioning");
-    window.setTimeout(()=>{heroImage.style.backgroundImage=`url("${slide.image}")`;heroImage.setAttribute("aria-label",slide.alt);if(heroLabel)heroLabel.textContent=slide.label[lang];if(heroProgress)heroProgress.style.width=`${((activeHero+1)/heroSlides.length)*100}%`;heroImage.classList.remove("is-transitioning")},260);
+    window.setTimeout(()=>{heroImage.style.backgroundImage=`url("${slide.image}")`;heroImage.setAttribute("aria-label",slide.alt);if(heroLabel)heroLabel.textContent=slide.label[lang];if(heroProgress)heroProgress.style.width=`${((activeHero+1)/heroSlides.length)*100}%`;heroImage.classList.remove("is-transitioning")},480);
     heroButtons.forEach((button,buttonIndex)=>{const selected=buttonIndex===activeHero;button.classList.toggle("is-active",selected);button.setAttribute("aria-pressed",String(selected))});
   }
   const restartHeroTimer=()=>{window.clearInterval(heroTimer);heroTimer=window.setInterval(()=>showHeroSlide(activeHero+1),6500)};
