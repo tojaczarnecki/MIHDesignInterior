@@ -11,6 +11,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:wght@400;500;600&family=Geomini:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="brief.css" />
+  <style>
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+    img, svg, video { max-width: 100%; }
+    @media (max-width: 767px) {
+      .brief-shell, .brief-intro, .brief-form-area, .field-grid, .option-grid { min-width: 0; max-width: 100%; }
+      h1, h2, h3, p, a, button, span { max-width: 100%; overflow-wrap: break-word; }
+      h1, h2, h3 { text-wrap: balance; }
+    }
+  </style>
 </head>
 <body>
   <header class="brief-header">

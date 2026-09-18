@@ -25,6 +25,15 @@
         .gallery-image, .gallery-image-wide, .gallery-image-tall, .gallery-image-detail { flex: 0 0 78vw; max-width: 320px; aspect-ratio: 4 / 5; scroll-snap-align: start; }
       }
     </style>
+    <style>
+      html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+      img, svg, video { max-width: 100%; }
+      @media (max-width: 767px) {
+        .container, .project-hero, .project-facts, .idea, .material-story, .project-gallery, .project-film, .project-credits { min-width: 0; max-width: 100%; }
+        h1, h2, h3, p, a, span { max-width: 100%; overflow-wrap: break-word; }
+        h1, h2, h3 { text-wrap: balance; }
+      }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#content" data-i18n="skip">Przejdź do treści</a>
